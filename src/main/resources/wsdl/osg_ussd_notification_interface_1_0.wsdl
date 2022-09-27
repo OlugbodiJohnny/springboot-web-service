@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- July 14, 2005 -->
-<wsdl:definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:osg_ussd_notification="http://www.csapi.org/wsdl/parlayx/ussd/notification/v1_0/interface" xmlns:osg_common_faults="http://www.csapi.org/wsdl/parlayx/common/v2_0/faults" xmlns:osg_ussd_xsd="http://www.csapi.org/schema/parlayx/ussd/v1_0" xmlns:osg_common_xsd="http://www.csapi.org/schema/parlayx/common/v2_1" xmlns:osg_ussd_notification_local_xsd="http://www.csapi.org/schema/parlayx/ussd/notification/v1_0/local" name="osg_ussd_notification_interface" targetNamespace="http://www.csapi.org/wsdl/parlayx/ussd/notification/v1_0/interface">
+<wsdl:definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:osg_ussd_notification="http://www.csapi.org/wsdl/parlayx/ussd/notification/v1_0/interface" xmlns:osg_common_faults="http://www.csapi.org/wsdl/parlayx/common/v2_0/faults"
+				  xmlns:osg_common_xsd="http://www.csapi.org/schema/parlayx/common/v2_1" xmlns:osg_ussd_notification_local_xsd="http://www.csapi.org/schema/parlayx/ussd/notification/v1_0/local" name="osg_ussd_notification_interface" targetNamespace="http://www.csapi.org/wsdl/parlayx/ussd/notification/v1_0/interface">
 	<wsdl:import namespace="http://www.csapi.org/wsdl/parlayx/common/v2_0/faults" location="parlayx_common_faults_2_0.wsdl"/>
 	<wsdl:types>
 		<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.csapi.org/schema/parlayx/ussd/notification/v1_0/local">

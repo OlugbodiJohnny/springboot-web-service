@@ -9,7 +9,6 @@
    xmlns:parlayx_payment_amount_charging="http://www.csapi.org/wsdl/parlayx/payment/amount_charging/v2_1/interface"
    xmlns:parlayx_common_faults="http://www.csapi.org/wsdl/parlayx/common/v2_0/faults"
    xmlns:parlayx_common_xsd="http://www.csapi.org/schema/parlayx/common/v2_1"
-   xmlns:parlayx_payment_xsd="http://www.csapi.org/schema/parlayx/payment/v2_1"
    xmlns:parlayx_payment_amount_charging_local_xsd="http://www.csapi.org/schema/parlayx/payment/amount_charging/v2_1/local">
 
    <wsdl:import namespace="http://www.csapi.org/wsdl/parlayx/common/v2_0/faults" location="parlayx_common_faults_2_0.wsdl"/>
@@ -17,7 +16,7 @@
    <wsdl:types>
       <xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.csapi.org/schema/parlayx/payment/amount_charging/v2_1/local">
          <xsd:import namespace="http://www.csapi.org/schema/parlayx/common/v2_1" schemaLocation="parlayx_common_types_2_1.xsd"/>
-         <xsd:import namespace="http://www.csapi.org/schema/parlayx/payment/v2_1" schemaLocation="parlayx_payment_types_2_1.xsd"/>
+<!--         <xsd:import namespace="http://www.csapi.org/schema/parlayx/payment/v2_1" schemaLocation="parlayx_payment_types_2_1.xsd"/>-->
 
          <xsd:element name="chargeAmount" type="parlayx_payment_amount_charging_local_xsd:chargeAmount"/>
          <xsd:complexType name="chargeAmount">
