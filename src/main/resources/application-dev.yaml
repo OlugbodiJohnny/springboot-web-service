@@ -1,0 +1,63 @@
+#spring
+spring:
+  application:
+    name: Web Service Practice
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+#server
+server:
+  port: 9080
+  servlet:
+    session:
+      timeout: 60m
+#logging
+logging:
+  level:
+    com:
+      johnny:
+        webservice: DEBUG
+    org:
+      caspi:
+        schema: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+        pushgateway:
+          enabled: true
+  server:
+    ssl:
+      enabled: false
+#base urls
+baseurl:
+  backend: ${BACKEND_BASE_URL:http://localhost:${server.port}}
+  web-service: ${WEB_SERVICE_BASE_URL:${baseurl.backend}/johnny/web-service-practice}
+#swagger url
+swaggerurl: ${baseurl.backend}/swagger-ui/index.html
+#exchangeApi
+exchange:
+  partner-account:
+    partner-username: ${EXCHANGE_PARTNER_ACCOUNT_PARTNER_USERNAME:betacare}
+    password: ${EXCHANGE_PARTNER_ACCOUNT_PASSWORD:betacare}
+  sms-account:
+    SpId: ${EXCHANGE_SMS_ACCOUNT_SPID:betacaresms}
+    SpPassword: ${EXCHANGE_SMS_ACCOUNT_SPPASSWORD:betacaresmsbetacare}
+  ussd-account:
+    SpId: ${EXCHANGE_USSD_ACCOUNT_SPID:betacareussd}
+    SpPassword: ${EXCHANGE_USSD_ACCOUNT_SPPASSWORD:betacareussd}
+  subscriptio-charging-account:
+    SpId: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPID:betacaresub}
+    SpPassword: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPPASSWORD:betacaresub}

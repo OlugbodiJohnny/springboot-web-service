@@ -1,0 +1,64 @@
+#spring
+spring:
+  application:
+    name: Web Service Practice
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+#server
+server:
+  port: ${PORT:9000}
+  servlet:
+    session:
+      timeout: 60m
+      tracking-modes: cookie
+#logging
+logging:
+  level:
+    com:
+      johnny:
+        webservice: DEBUG
+    org:
+      caspi:
+        schema: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+        pushgateway:
+          enabled: true
+  server:
+    ssl:
+      enabled: false
+#base urls
+baseurl:
+  backend: ${BACKEND_BASE_URL}
+  web-service: ${WEB_SERVICE_BASE_URL}
+#swagger url
+swaggerurl: ${baseurl.backend}/swagger-ui/index.html
+#exchangeApi
+exchange:
+  partner-account:
+    partner-username: ${EXCHANGE_PARTNER_ACCOUNT_PARTNER_USERNAME}
+    password: ${EXCHANGE_PARTNER_ACCOUNT_PASSWORD}
+  sms-account:
+    SpId: ${EXCHANGE_SMS_ACCOUNT_SPID}
+    SpPassword: ${EXCHANGE_SMS_ACCOUNT_SPPASSWORD}
+  ussd-account:
+    SpId: ${EXCHANGE_USSD_ACCOUNT_SPID}
+    SpPassword: ${EXCHANGE_USSD_ACCOUNT_SPPASSWORD}
+  subscriptio-charging-account:
+    SpId: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPID}
+    SpPassword: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPPASSWORD}
