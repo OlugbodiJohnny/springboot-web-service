@@ -10,6 +10,7 @@ package com.johnny.webservice.schema.parlayx.ussd.notification.v1_0.local;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,8 @@ import java.util.List;
  * 
  * 
  */
+
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NamedParameterList", propOrder = {
     "item"
