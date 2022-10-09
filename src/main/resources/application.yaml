@@ -62,3 +62,7 @@ exchange:
   subscriptio-charging-account:
     SpId: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPID}
     SpPassword: ${EXCHANGE_SUB_CHARGING__ACCOUNT_SPPASSWORD}
+  test:
+    subscription-service-id: ${TEST_SUBSCRIPTION_SERVICE_ID}
+    subscription-product-id: ${TEST_SUBSCRIPTION_PRODUCT_ID}
+    short-code: ${TEST_SHORT_CODE}
