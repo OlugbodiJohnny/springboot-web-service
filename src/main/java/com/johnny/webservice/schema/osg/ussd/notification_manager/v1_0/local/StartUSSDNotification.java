@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.*;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "startUSSDNotification", propOrder = {
     "reference",
