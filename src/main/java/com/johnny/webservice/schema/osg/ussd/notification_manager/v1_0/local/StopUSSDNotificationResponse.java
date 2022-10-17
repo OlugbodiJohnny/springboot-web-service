@@ -10,6 +10,7 @@ package com.johnny.webservice.schema.osg.ussd.notification_manager.v1_0.local;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -31,6 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "stopUSSDNotificationResponse")
 public class StopUSSDNotificationResponse {
